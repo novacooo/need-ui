@@ -2,19 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
-export enum ButtonVariant {
-  Solid = 'solid',
-  Outline = 'outline',
-  Ghost = 'ghost',
-}
+type ButtonVariant = 'solid' | 'outline' | 'ghost';
 
-export enum ButtonSize {
-  Small = 'small',
-  Standard = 'standard',
-  Large = 'large',
-}
+type ButtonSize = 'small' | 'standard' | 'large';
 
-export interface ButtonProps {
+interface ButtonProps {
   children: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -22,22 +14,22 @@ export interface ButtonProps {
 
 const getPadding = (size: ButtonSize): string => {
   switch (size) {
-    case ButtonSize.Small:
+    case 'small':
       return '0.8rem 1.4rem';
-    case ButtonSize.Standard:
+    case 'standard':
       return '1rem 1.8rem';
-    case ButtonSize.Large:
+    case 'large':
       return '1.2rem 2.2rem';
   }
 };
 
 const getFontSize = (size: ButtonSize): string => {
   switch (size) {
-    case ButtonSize.Small:
+    case 'small':
       return '1.4rem';
-    case ButtonSize.Standard:
+    case 'standard':
       return '1.6rem';
-    case ButtonSize.Large:
+    case 'large':
       return '1.6rem';
   }
 };
@@ -60,7 +52,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const Button = ({ children, variant = ButtonVariant.Solid, size = ButtonSize.Standard }: ButtonProps) => (
+const Button = ({ children, variant = 'solid', size = 'small' }: ButtonProps) => (
   <StyledButton variant={variant} size={size}>
     {children}
   </StyledButton>
