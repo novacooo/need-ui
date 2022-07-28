@@ -6,7 +6,7 @@ type ButtonVariant = 'solid' | 'outline' | 'ghost';
 
 type ButtonSize = 'small' | 'standard' | 'large';
 
-interface ButtonProps {
+export interface ButtonProps {
   children: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
@@ -20,6 +20,8 @@ const getPadding = (size: ButtonSize): string => {
       return '1rem 1.8rem';
     case 'large':
       return '1.2rem 2.2rem';
+    default:
+      return '1rem 1.8rem';
   }
 };
 
@@ -30,6 +32,8 @@ const getFontSize = (size: ButtonSize): string => {
     case 'standard':
       return '1.6rem';
     case 'large':
+      return '1.6rem';
+    default:
       return '1.6rem';
   }
 };

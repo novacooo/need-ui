@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { defaultDarkTheme, ITheme } from '../../theme';
 import GlobalStyle from '../../theme/GlobalStyle';
-import { Helmet } from 'react-helmet';
 
 interface NeedProviderProps {
   children: ReactNode;

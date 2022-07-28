@@ -1,1 +1,3 @@
-export { default } from './NeedProvider';
+import NeedProvider from './NeedProvider';
+
+export default NeedProvider;
