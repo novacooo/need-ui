@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { darken, lighten } from 'polished';
+import { darken, lighten, transparentize } from 'polished';
 
 type ButtonVariant = 'solid' | 'outline' | 'ghost';
 
@@ -39,20 +39,32 @@ const getFontSize = (size: ButtonSize): string => {
 };
 
 const StyledButton = styled.button<ButtonProps>`
+  position: relative;
   padding: ${({ size }) => getPadding(size)};
-  background-color: ${({ theme }) => darken(0.15, theme.palette.purple)};
+  background-color: ${({ theme }) => darken(0.1, theme.palette.purple)};
   border: 2px solid ${({ theme }) => theme.palette.purple};
   border-radius: 1.2rem;
   color: ${({ theme }) => theme.text.primary};
   font-weight: 600;
   font-size: ${({ size }) => getFontSize(size)};
-  transition-property: background-color, border-color;
-  transition-duration: 0.2s;
+  transition-property: background-color, border-color, transform, box-shadow;
+  transition-duration: 0.1s;
 
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) => theme.palette.purple};
+    border-color: ${({ theme }) => lighten(0.1, theme.palette.purple)};
+    transform: scale(0.98);
+  }
+
+  &:active {
+    transform: scale(0.96);
+    background-color: ${({ theme }) => lighten(0.05, theme.palette.purple)};
     border-color: ${({ theme }) => lighten(0.15, theme.palette.purple)};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.3rem ${({ theme }) => transparentize(0.6, theme.palette.purple)};
   }
 `;
 

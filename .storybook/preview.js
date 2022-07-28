@@ -1,5 +1,12 @@
 import React from 'react';
 import { NeedProvider } from '../src';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: grid;
+  place-items: center;
+  height: 100%;
+`;
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -14,7 +21,9 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <NeedProvider>
-      <Story />
+      <Wrapper>
+        <Story />
+      </Wrapper>
     </NeedProvider>
   ),
 ];
