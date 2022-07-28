@@ -56,7 +56,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const Button = ({ children, variant = 'solid', size = 'small' }: ButtonProps) => (
+const Button = ({ children, variant = 'solid', size = 'standard' }: ButtonProps) => (
   <StyledButton variant={variant} size={size}>
     {children}
   </StyledButton>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import Button from './Button';
+import renderWithThemeProvider from '../../helpers/renderWithNeedProvider';
 
 describe('Button', () => {
-  it('renders the Button component', () => {
-    render(<Button>Click me</Button>);
+  it('renders component', () => {
+    renderWithThemeProvider(<Button>Click me</Button>);
   });
 });

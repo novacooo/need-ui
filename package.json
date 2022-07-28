@@ -4,7 +4,7 @@
   "description": "A react component library",
   "scripts": {
     "rollup": "rollup -c",
-    "test": "jest",
+    "test": "jest --watchAll",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "format": "prettier --write '{,!(node_modules)/**/}*.{jsx,js,tsx,ts,css,scss}' --config ./.prettierrc",
@@ -14,8 +14,9 @@
   "author": "Jacek Nowak",
   "license": "MIT",
   "dependencies": {
-    "polished": "^4.2.2",
     "@storybook/react": "^6.5.9",
+    "@testing-library/react": "^13.3.0",
+    "polished": "^4.2.2",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
@@ -33,7 +34,6 @@
     "@storybook/builder-webpack4": "^6.5.9",
     "@storybook/manager-webpack4": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
-    "@testing-library/react": "^13.3.0",
     "@types/jest": "^28.1.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
