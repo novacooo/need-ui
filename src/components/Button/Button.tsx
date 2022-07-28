@@ -32,9 +32,12 @@ const getPadding = (size: ButtonSize): string => {
 
 const StyledButton = styled.button<ButtonProps>`
   padding: ${({ size }) => getPadding(size)};
-  background-color: hsl(263, 65%, 45%);
-  border: 1px solid hsla(263, 65%, 25%, 1);
+  background-color: ${({ theme }) => theme.palette.purple.standard};
+  border: 1px solid ${({ theme }) => theme.palette.purple.dark};
   border-radius: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.6rem;
   transition-property: background-color, border-color;
   transition-duration: 0.2s;
 
