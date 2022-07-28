@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { darken, lighten } from 'polished';
 
 export enum ButtonVariant {
   Solid = 'solid',
@@ -43,8 +44,8 @@ const getFontSize = (size: ButtonSize): string => {
 
 const StyledButton = styled.button<ButtonProps>`
   padding: ${({ size }) => getPadding(size)};
-  background-color: ${({ theme }) => `darken(${theme.palette.purple}, 20%)`};
-  border: 1px solid ${({ theme }) => theme.palette.purple};
+  background-color: ${({ theme }) => darken(0.15, theme.palette.purple)};
+  border: 2px solid ${({ theme }) => theme.palette.purple};
   border-radius: 1.2rem;
   color: ${({ theme }) => theme.text.primary};
   font-weight: 600;
@@ -55,7 +56,7 @@ const StyledButton = styled.button<ButtonProps>`
   &:hover {
     cursor: pointer;
     background-color: ${({ theme }) => theme.palette.purple};
-    border-color: ${({ theme }) => `lighten(${theme.palette.purple}, 20%)`};
+    border-color: ${({ theme }) => lighten(0.15, theme.palette.purple)};
   }
 `;
 
