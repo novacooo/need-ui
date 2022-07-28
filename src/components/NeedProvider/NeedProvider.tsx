@@ -1,22 +1,14 @@
 import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { ITheme } from '../../theme';
+import { defaultDarkTheme, ITheme } from '../../theme';
 import GlobalStyle from '../../theme/GlobalStyle';
 
 interface NeedProviderProps {
   children: ReactNode;
+  theme?: ITheme;
 }
 
-const theme: ITheme = {
-  palette: {
-    purple: {
-      standard: 'hsl(263, 65%, 45%)',
-      dark: 'hsla(263, 65%, 25%, 1)',
-    },
-  },
-};
-
-const NeedProvider = ({ children }: NeedProviderProps) => (
+const NeedProvider = ({ children, theme = defaultDarkTheme }: NeedProviderProps) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     {children}

@@ -30,19 +30,32 @@ const getPadding = (size: ButtonSize): string => {
   }
 };
 
+const getFontSize = (size: ButtonSize): string => {
+  switch (size) {
+    case ButtonSize.Small:
+      return '1.4rem';
+    case ButtonSize.Standard:
+      return '1.6rem';
+    case ButtonSize.Large:
+      return '1.6rem';
+  }
+};
+
 const StyledButton = styled.button<ButtonProps>`
   padding: ${({ size }) => getPadding(size)};
-  background-color: ${({ theme }) => theme.palette.purple.standard};
-  border: 1px solid ${({ theme }) => theme.palette.purple.dark};
+  background-color: ${({ theme }) => `darken(${theme.palette.purple}, 20%)`};
+  border: 1px solid ${({ theme }) => theme.palette.purple};
   border-radius: 1.2rem;
-  color: #ffffff;
+  color: ${({ theme }) => theme.text.primary};
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: ${({ size }) => getFontSize(size)};
   transition-property: background-color, border-color;
   transition-duration: 0.2s;
 
   &:hover {
     cursor: pointer;
+    background-color: ${({ theme }) => theme.palette.purple};
+    border-color: ${({ theme }) => `lighten(${theme.palette.purple}, 20%)`};
   }
 `;
 
