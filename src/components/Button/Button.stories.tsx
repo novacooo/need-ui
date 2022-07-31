@@ -63,19 +63,19 @@ OutlineLarge.args = {
 };
 
 export const GhostSmall = Template.bind({});
-OutlineSmall.args = {
+GhostSmall.args = {
   variant: 'ghost',
   size: 'small',
 };
 
 export const GhostStandard = Template.bind({});
-OutlineStandard.args = {
+GhostStandard.args = {
   variant: 'ghost',
   size: 'standard',
 };
 
 export const GhostLarge = Template.bind({});
-OutlineLarge.args = {
+GhostLarge.args = {
   variant: 'ghost',
   size: 'large',
 };
