@@ -40,7 +40,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   padding: ${({ size }) => getPadding(size)};
   background-color: ${({ theme, variant }) =>
     variant === 'solid' ? darken(0.1, theme.palette.purple) : 'transparent'};
-  border: ${({ theme, variant }) => (variant === 'ghost' ? 'none' : `2px solid ${theme.palette.purple}`)};
+  border: ${({ theme, variant }) => (variant === 'ghost' ? 'none' : `0.2rem solid ${theme.palette.purple}`)};
   border-radius: 1.2rem;
   color: ${({ theme }) => theme.text.primary};
   font-weight: 600;

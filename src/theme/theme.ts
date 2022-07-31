@@ -15,6 +15,9 @@ export interface ITheme {
   palette: {
     purple: string;
   };
+  borderRadius: {
+    standard: string;
+  };
 }
 
 export const defaultDarkTheme: ITheme = {
@@ -33,5 +36,8 @@ export const defaultDarkTheme: ITheme = {
   },
   palette: {
     purple: 'hsl(263, 65%, 45%)',
+  },
+  borderRadius: {
+    standard: '1.2rem',
   },
 };
