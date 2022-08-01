@@ -8,6 +8,7 @@ export interface ITheme {
   };
   background: {
     primary: string;
+    secondary: string;
   };
   text: {
     primary: string;
@@ -22,9 +23,19 @@ export interface ITheme {
         standard: string;
         large: string;
       };
+      input: {
+        small: string;
+        standard: string;
+        large: string;
+      };
     };
     height: {
       button: {
+        small: string;
+        standard: string;
+        large: string;
+      };
+      input: {
         small: string;
         standard: string;
         large: string;
@@ -44,6 +55,11 @@ export interface ITheme {
         standard: string;
         large: string;
       };
+      input: {
+        small: string;
+        standard: string;
+        large: string;
+      };
     };
     fontWeight: {
       button: number;
@@ -58,6 +74,7 @@ export interface ITheme {
     };
     transitionDuration: {
       button: string;
+      input: string;
     };
   };
 }
@@ -72,6 +89,7 @@ export const defaultDarkTheme: ITheme = {
   },
   background: {
     primary: 'hsl(241, 4%, 9%)',
+    secondary: 'hsl(241, 4%, 15%)',
   },
   text: {
     primary: 'hsl(0, 0%, 100%)',
@@ -86,9 +104,19 @@ export const defaultDarkTheme: ITheme = {
         standard: '0 1.8rem',
         large: '0 2.2rem',
       },
+      input: {
+        small: '0 1.4rem',
+        standard: '0 1.8rem',
+        large: '0 2.2rem',
+      },
     },
     height: {
       button: {
+        small: '3.6rem',
+        standard: '4.2rem',
+        large: '4.6rem',
+      },
+      input: {
         small: '3.6rem',
         standard: '4.2rem',
         large: '4.6rem',
@@ -108,6 +136,11 @@ export const defaultDarkTheme: ITheme = {
         standard: '1.6rem',
         large: '1.6rem',
       },
+      input: {
+        small: '1.4rem',
+        standard: '1.6rem',
+        large: '1.6rem',
+      },
     },
     fontWeight: {
       button: 600,
@@ -122,6 +155,7 @@ export const defaultDarkTheme: ITheme = {
     },
     transitionDuration: {
       button: '0.1s',
+      input: '0.1s',
     },
   },
 };

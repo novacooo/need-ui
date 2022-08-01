@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyledInput, StyledInputProps } from './Input.styles';
+import { InputSize, StyledInput, StyledInputProps } from './Input.styles';
 
 export interface InputProps extends StyledInputProps {
   placeholder: string;
+  size?: InputSize;
 }
 
-const Input = ({ placeholder }: InputProps) => <StyledInput placeholder={placeholder} />;
+const Input = ({ placeholder, size = 'standard' }: InputProps) => <StyledInput placeholder={placeholder} inputSize={size} />;
 
 export default Input;
