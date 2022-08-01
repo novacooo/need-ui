@@ -1,5 +1,5 @@
 export interface ITheme {
-  breakpoints: {
+  breakpoint: {
     sm: string;
     md: string;
     lg: string;
@@ -15,13 +15,55 @@ export interface ITheme {
   palette: {
     purple: string;
   };
-  borderRadius: {
-    standard: string;
+  style: {
+    padding: {
+      button: {
+        small: string;
+        standard: string;
+        large: string;
+      };
+    };
+    height: {
+      button: {
+        small: string;
+        standard: string;
+        large: string;
+      };
+    };
+    borderWidth: {
+      button: string;
+      input: string;
+    };
+    borderRadius: {
+      button: string;
+      input: string;
+    };
+    fontSize: {
+      button: {
+        small: string;
+        standard: string;
+        large: string;
+      };
+    };
+    fontWeight: {
+      button: number;
+    };
+    transform: {
+      scale: {
+        button: {
+          hover: string;
+          active: string;
+        };
+      };
+    };
+    transitionDuration: {
+      button: string;
+    };
   };
 }
 
 export const defaultDarkTheme: ITheme = {
-  breakpoints: {
+  breakpoint: {
     sm: '@media (min-width: 640px)',
     md: '@media (min-width: 768px)',
     lg: '@media (min-width: 1024px)',
@@ -37,7 +79,49 @@ export const defaultDarkTheme: ITheme = {
   palette: {
     purple: 'hsl(263, 65%, 45%)',
   },
-  borderRadius: {
-    standard: '1.2rem',
+  style: {
+    padding: {
+      button: {
+        small: '0 1.4rem',
+        standard: '0 1.8rem',
+        large: '0 2.2rem',
+      },
+    },
+    height: {
+      button: {
+        small: '3.6rem',
+        standard: '4.2rem',
+        large: '4.6rem',
+      },
+    },
+    borderWidth: {
+      button: '0.2rem',
+      input: '0.2rem',
+    },
+    borderRadius: {
+      button: '1.2rem',
+      input: '1.2rem',
+    },
+    fontSize: {
+      button: {
+        small: '1.4rem',
+        standard: '1.6rem',
+        large: '1.6rem',
+      },
+    },
+    fontWeight: {
+      button: 600,
+    },
+    transform: {
+      scale: {
+        button: {
+          hover: 'scale(0.98)',
+          active: 'scale(0.96)',
+        },
+      },
+    },
+    transitionDuration: {
+      button: '0.1s',
+    },
   },
 };

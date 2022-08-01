@@ -26,7 +26,7 @@ export const StyledInput = styled.input<StyledInputProps>`
   font-size: ${({ size }) => getFontSize(size)};
   background-color: #ffffff10;
   border: none;
-  border-radius: ${({ theme }) => theme.borderRadius.standard};
+  border-radius: ${({ theme }) => theme.style.borderRadius.input};
   color: ${({ theme }) => theme.text.primary};
   transition-property: background-color, border-color, border-width, box-shadow;
   transition-duration: 0.1s;
