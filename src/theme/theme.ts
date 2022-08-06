@@ -12,6 +12,7 @@ export interface ITheme {
   };
   text: {
     primary: string;
+    secondary: string;
   };
   palette: {
     white: string;
@@ -107,6 +108,7 @@ export const defaultDarkTheme: ITheme = {
   },
   text: {
     primary: 'hsl(0, 0%, 100%)',
+    secondary: 'hsl(0, 0%, 70%)',
   },
   palette: {
     white: 'hsl(0, 0%, 100%)',
@@ -166,12 +168,12 @@ export const defaultDarkTheme: ITheme = {
     },
     fontWeight: {
       button: 600,
-      input: 400,
+      input: 500,
     },
     letterSpacing: {
-      global: '0.1rem',
-      button: '0.15rem',
-      input: '0.15rem',
+      global: '0.05em',
+      button: '0.07em',
+      input: '0.07em',
     },
     transform: {
       scale: {
