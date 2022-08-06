@@ -18,7 +18,7 @@ export interface ITheme {
     purple: string;
   };
   style: {
-    margin: {
+    marginLeft: {
       inputLabel: {
         small: string;
         standard: string;
@@ -113,11 +113,11 @@ export const defaultDarkTheme: ITheme = {
     purple: 'hsl(263, 65%, 45%)',
   },
   style: {
-    margin: {
+    marginLeft: {
       inputLabel: {
-        small: '0 0 0 1.6rem',
-        standard: '0 0 0 2rem',
-        large: '0 0 0 2.4rem',
+        small: '1.6rem',
+        standard: '2rem',
+        large: '2.4rem',
       },
     },
     padding: {
