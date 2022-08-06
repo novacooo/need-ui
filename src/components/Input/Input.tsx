@@ -1,11 +1,22 @@
-import React from 'react';
-import { InputSize, StyledInput, StyledInputProps } from './Input.styles';
+import React, { useId } from 'react';
+import { InputSize, InputWrapper, StyledInput, StyledInputProps, StyledLabel } from './Input.styles';
 
 export interface InputProps extends StyledInputProps {
-  placeholder: string;
+  label: string;
   size?: InputSize;
 }
 
-const Input = ({ placeholder, size = 'standard' }: InputProps) => <StyledInput placeholder={placeholder} inputSize={size} />;
+const Input = ({ label, size = 'standard' }: InputProps) => {
+  const id = useId();
+
+  return (
+    <InputWrapper>
+      <StyledInput id={id} inputSize={size} type="text" />
+      <StyledLabel htmlFor={id} inputSize={size}>
+        {label}
+      </StyledLabel>
+    </InputWrapper>
+  );
+};
 
 export default Input;

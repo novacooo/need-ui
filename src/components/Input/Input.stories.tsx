@@ -8,12 +8,12 @@ export default {
   title: 'NeedUI/Input',
   component: Input,
   argTypes: {
-    placeholder: {
-      name: 'Placeholder',
+    label: {
+      name: 'Label',
     },
   },
   args: {
-    placeholder: 'Placeholder',
+    label: 'Label',
   },
 } as ComponentMeta<typeof Input>;
 

@@ -14,9 +14,17 @@ export interface ITheme {
     primary: string;
   };
   palette: {
+    white: string;
     purple: string;
   };
   style: {
+    margin: {
+      inputLabel: {
+        small: string;
+        standard: string;
+        large: string;
+      };
+    };
     padding: {
       button: {
         small: string;
@@ -63,6 +71,12 @@ export interface ITheme {
     };
     fontWeight: {
       button: number;
+      input: number;
+    };
+    letterSpacing: {
+      global: string;
+      button: string;
+      input: string;
     };
     transform: {
       scale: {
@@ -95,9 +109,17 @@ export const defaultDarkTheme: ITheme = {
     primary: 'hsl(0, 0%, 100%)',
   },
   palette: {
+    white: 'hsl(0, 0%, 100%)',
     purple: 'hsl(263, 65%, 45%)',
   },
   style: {
+    margin: {
+      inputLabel: {
+        small: '0 0 0 1.6rem',
+        standard: '0 0 0 2rem',
+        large: '0 0 0 2.4rem',
+      },
+    },
     padding: {
       button: {
         small: '0 1.4rem',
@@ -144,6 +166,12 @@ export const defaultDarkTheme: ITheme = {
     },
     fontWeight: {
       button: 600,
+      input: 400,
+    },
+    letterSpacing: {
+      global: '0.1rem',
+      button: '0.15rem',
+      input: '0.15rem',
     },
     transform: {
       scale: {

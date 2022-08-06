@@ -19,6 +19,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   color: ${({ theme }) => theme.text.primary};
   font-weight: ${({ theme }) => theme.style.fontWeight.button};
   font-size: ${({ theme, size }) => theme.style.fontSize.button[size]};
+  letter-spacing: ${({ theme }) => theme.style.letterSpacing.button};
   user-select: none;
   transition-property: background-color, border-color, transform, box-shadow;
   transition-duration: ${({ theme }) => theme.style.transitionDuration.button};
