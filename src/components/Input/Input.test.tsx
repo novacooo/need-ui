@@ -4,6 +4,6 @@ import renderWithThemeProvider from '../../helpers/renderWithNeedProvider';
 
 describe('Input', () => {
   it('renders component', () => {
-    renderWithThemeProvider(<Input placeholder="Test" />);
+    renderWithThemeProvider(<Input label="Test" />);
   });
 });
