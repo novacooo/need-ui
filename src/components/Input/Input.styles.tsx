@@ -40,8 +40,9 @@ export const StyledInput = styled.input<StyledInputProps>`
   font-weight: ${({ theme }) => theme.style.fontWeight.input};
   color: ${({ theme }) => theme.text.primary};
   letter-spacing: ${({ theme }) => theme.style.letterSpacing.input};
-  transition-property: background-color, border-color;
+  transition-property: background-color, border-color, clip-path;
   transition-duration: ${({ theme }) => theme.style.transitionDuration.input};
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 10rem 0, 10rem 0, 0 0, 0 0);
 
   &:hover {
     color: ${({ theme }) => theme.text.primary};
@@ -50,6 +51,7 @@ export const StyledInput = styled.input<StyledInputProps>`
   &:focus {
     border-color: ${({ theme }) => lighten(0.15, theme.palette.purple)};
     background-color: transparent;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 10rem 0, 10rem 0.2rem, 1rem 0.2rem, 1rem 0);
 
     + ${StyledLabel} {
       transform: translateY(50%) translateY(calc(${({ theme, inputSize }) => `-${theme.style.height.input[inputSize]}`} / 2)) scale(80%);
